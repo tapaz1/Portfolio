@@ -1,0 +1,43 @@
+.zJcYyJjh_0 {
+  fill: transparent;
+  stroke-dasharray: 143790 143792;
+  stroke-dashoffset: 143791;
+  animation: zJcYyJjh_draw 6000ms linear 0ms forwards;
+}
+
+.zJcYyJjh_1 {
+  fill: transparent;
+  stroke-dasharray: 23578 23580;
+  stroke-dashoffset: 23579;
+  animation: zJcYyJjh_draw 6000ms linear 0ms forwards;
+}
+
+.zJcYyJjh_2 {
+  fill: transparent;
+  stroke-dasharray: 4773 4775;
+  stroke-dashoffset: 4774;
+  animation: zJcYyJjh_draw 6000ms linear 0ms forwards;
+}
+
+@keyframes zJcYyJjh_draw {
+  0% {
+    fill: transparent;
+  }
+
+  25% {
+    fill: transparent;
+  }
+
+  50% {
+    fill: transparent;
+  }
+
+  75% {
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: red;
+    stroke: white;
+  }
+}

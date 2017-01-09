@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+#sogetiLogo {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#sogetiLogo svg {
+  fill: #ef4527;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: block !important;
+}
+
+.appContainer {
+  width: 97%;
+  margin: 15px;
+  display: block;
+  height: auto;
+  background: #ffffff;
+}

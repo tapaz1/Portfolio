@@ -44,65 +44,105 @@
 }
 
 #loadingContainer {
+  width: 100%;
+  margin-bottom: 1em;
   background: transparent;
-  -webkit-transform: translateY(30vh);
-  -moz-transform: translateY(30vh);
-  -ms-transform: translateY(30vh);
-  -o-transform: translateY(30vh);
-  transform: translateY(30vh);
+  /*-webkit-transform: translateY(30vh);*/
+  /*-moz-transform: translateY(30vh);*/
+  /*-ms-transform: translateY(30vh);*/
+  /*-o-transform: translateY(30vh);*/
+  /*transform: translateY(30vh);*/
 }
 
 .resumeCardContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 85%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /*-webkit-transform: translateY(20%);*/
+  /*-moz-transform: translateY(20%);*/
+  /*-ms-transform: translateY(20%);*/
+  /*-o-transform: translateY(20%);*/
+  /*transform: translateY(20%);*/
   background: #ffffff;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
 
-.animateToTheTop {
+#resumeCardContent {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.expandResumeCardContent {
+  max-height: 500px !important;
+  -webkit-transition: max-height 500ms;
+  -moz-transition: max-height 500ms;
+  -ms-transition: max-height 500ms;
+  -o-transition: max-height 500ms;
+  transition: max-height 500ms;
+}
+
+.md-card-header-text {
+  margin: 0 !important;
+}
+
+.resumeCardHeader {
+  width: 100%;
+  height: auto !important;
+}
+
+.resumeCardHeader .md-card-header-text {
+  margin: 0 !important;
+}
+
+.animateLoadingContainer {
+  width: 25% !important;
   background: #ffffff !important;
-  -webkit-transition: background 2000ms;
-  -moz-transition: background 2000ms;
-  -ms-transition: background 2000ms;
-  -o-transition: background 2000ms;
-  transition: background 2000ms;
-  -webkit-animation: bounceUp 1500ms ease-in;
-  -o-animation: bounceUp 1500ms ease-in;
-  animation: bounceUp 1500ms ease-in;
-  -webkit-transform: translateY(0) !important;
-  -moz-transform: translateY(0) !important;
-  -ms-transform: translateY(0) !important;
-  -o-transform: translateY(0) !important;
-  transform: translateY(0) !important;
+  -webkit-transition: background, width 500ms;
+  -moz-transition: background, width 500ms;
+  -ms-transition: background, width 500ms;
+  -o-transition: background, width 500ms;
+  transition: background, width 500ms;
+  /*-webkit-animation: bounceUp 1500ms ease-in;*/
+  /*-o-animation: bounceUp 1500ms ease-in;*/
+  /*animation: bounceUp 1500ms ease-in;*/
+  /*-webkit-transform: translateY(0) !important;*/
+  /*-moz-transform: translateY(0) !important;*/
+  /*-ms-transform: translateY(0) !important;*/
+  /*-o-transform: translateY(0) !important;*/
+  /*transform: translateY(0) !important;*/
 }
 
-@keyframes bounceUp {
-  0%, 20%, 50%, 80% {
-    -webkit-transform: translateY(30vh);
-    -moz-transform: translateY(30vh);
-    -ms-transform: translateY(30vh);
-    -o-transform: translateY(30vh);
-    transform: translateY(30vh);
-  }
-  40%, 60% {
-    -webkit-transform: translateY(32vh);
-    -moz-transform: translateY(32vh);
-    -ms-transform: translateY(32vh);
-    -o-transform: translateY(32vh);
-    transform: translateY(32vh);
-  }
+/*@keyframes bounceUp {*/
+  /*0%, 20%, 50%, 80% {*/
+  /*}*/
+  /*40%, 60% {*/
+    /*-webkit-transform: translateY(22%);*/
+    /*-moz-transform: translateY(22%);*/
+    /*-ms-transform: translateY(22%);*/
+    /*-o-transform: translateY(22%);*/
+    /*transform: translateY(22%);*/
+  /*}*/
 
-  100% {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
+  /*100% {*/
+    /*-webkit-transform: translateY(0);*/
+    /*-moz-transform: translateY(0);*/
+    /*-ms-transform: translateY(0);*/
+    /*-o-transform: translateY(0);*/
+    /*transform: translateY(0);*/
+  /*}*/
+/*}*/
 
 .profilePicContainer {
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
   border-radius: 25%;
   height: 217px;
   overflow: hidden;

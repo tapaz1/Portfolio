@@ -8,18 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public contentIsLoaded = false;
-  public animateLoadingContainer = false;
+  public animateHeader = false;
+  public animateHeight = false;
 
   constructor() {
     setTimeout(() => {
-      console.log('First timeout run..');
-      this.animateLoadingContainer = true;
+      this.animateHeader = true;
       setTimeout(() => {
-          this.contentIsLoaded = true;
-        console.log('Second timeout run..');
-
-      }, 2000)
+        this.animateHeight = true;
+      }, 1000)
     }, 5000);
   }
 

@@ -1,4 +1,4 @@
-<div id="loadingContainer">
+<div id="loadingContainer" [ngClass]="{'animateToTheTop': animateLoadingContainer}">
   <!--?xml version="1.0" standalone="no"?-->
   <!--?xml version="1.0" standalone="no"?-->
 
@@ -63,13 +63,15 @@ c1401 0 1760 3 1761 13 2 23 -3 52 -10 60 -4 4 -59 27 -122 51 -392 149 -700
     </g>
   </svg>
 </div>
-<md-card [ngClass]="{'visible': contentIsLoaded, 'hidden': !contentIsLoaded }">
+<md-card class="resumeCardContainer" [ngClass]="{'visible': contentIsLoaded, 'hidden': !contentIsLoaded }">
   <md-card-header>
     <md-card-title>
       {{title}}
     </md-card-title>
   </md-card-header>
   <md-card-content>
-    <p class="resumeBody">Body goes here..</p>
+    <!--<div class="profilePicContainer">-->
+      <!--<img src="../assets/img/adam-face-shot.png"/>-->
+    <!--</div>-->
   </md-card-content>
 </md-card>

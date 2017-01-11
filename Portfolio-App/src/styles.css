@@ -21,9 +21,10 @@
 }
 
 .appContainer {
-  width: 97%;
-  margin: 15px;
+  width: 85%;
+  max-width: 800px;
+  margin: 0 auto;
   display: block;
   height: auto;
-  background: #ffffff;
+  background: #eeeeee;
 }

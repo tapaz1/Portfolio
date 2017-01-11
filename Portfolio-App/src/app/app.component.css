@@ -38,6 +38,78 @@
   100% {
     stroke-dashoffset: 0;
     fill: red;
-    stroke: white;
+    stroke: #ffffff;
+    background: #ffffff;
   }
+}
+
+#loadingContainer {
+  background: transparent;
+  -webkit-transform: translateY(30vh);
+  -moz-transform: translateY(30vh);
+  -ms-transform: translateY(30vh);
+  -o-transform: translateY(30vh);
+  transform: translateY(30vh);
+}
+
+.resumeCardContainer {
+  background: #ffffff;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.animateToTheTop {
+  background: #ffffff !important;
+  -webkit-transition: background 2000ms;
+  -moz-transition: background 2000ms;
+  -ms-transition: background 2000ms;
+  -o-transition: background 2000ms;
+  transition: background 2000ms;
+  -webkit-animation: bounceUp 1500ms ease-in;
+  -o-animation: bounceUp 1500ms ease-in;
+  animation: bounceUp 1500ms ease-in;
+  -webkit-transform: translateY(0) !important;
+  -moz-transform: translateY(0) !important;
+  -ms-transform: translateY(0) !important;
+  -o-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+}
+
+@keyframes bounceUp {
+  0%, 20%, 50%, 80% {
+    -webkit-transform: translateY(30vh);
+    -moz-transform: translateY(30vh);
+    -ms-transform: translateY(30vh);
+    -o-transform: translateY(30vh);
+    transform: translateY(30vh);
+  }
+  40%, 60% {
+    -webkit-transform: translateY(32vh);
+    -moz-transform: translateY(32vh);
+    -ms-transform: translateY(32vh);
+    -o-transform: translateY(32vh);
+    transform: translateY(32vh);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.profilePicContainer {
+  display: inline-block;
+  border-radius: 25%;
+  height: 217px;
+  overflow: hidden;
+  width: 160px;
+  box-shadow: 0px 0px 30px #cccccc
+}
+
+.profilePicContainer img {
+  max-width: 160px;
 }

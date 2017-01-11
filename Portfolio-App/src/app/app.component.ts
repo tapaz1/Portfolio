@@ -9,12 +9,18 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   public contentIsLoaded = false;
+  public animateLoadingContainer = false;
 
   constructor() {
     setTimeout(() => {
-      console.log('Load profile');
-      this.contentIsLoaded = true;
-    }, 5000)
+      console.log('First timeout run..');
+      this.animateLoadingContainer = true;
+      setTimeout(() => {
+          this.contentIsLoaded = true;
+        console.log('Second timeout run..');
+
+      }, 2000)
+    }, 5000);
   }
 
   title = "Adam Paz Portfolio coming..";

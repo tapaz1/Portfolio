@@ -22,9 +22,13 @@
 
 .appContainer {
   width: 85%;
+  background-image: url('http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=25467017');
   max-width: 800px;
   margin: 0 auto;
   display: block;
   height: auto;
-  background: #eeeeee;
+}
+
+body {
+  overflow: hidden;
 }

@@ -44,40 +44,90 @@
 }
 
 #loadingContainer {
-  width: 100%;
+  width: 40%;
+  min-width: 200px;
   margin-bottom: 1em;
+  position: relative;
   background: transparent;
-  /*-webkit-transform: translateY(30vh);*/
-  /*-moz-transform: translateY(30vh);*/
-  /*-ms-transform: translateY(30vh);*/
-  /*-o-transform: translateY(30vh);*/
-  /*transform: translateY(30vh);*/
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.animateLoadingContainer {
+  background: #ffffff !important;
+  -webkit-transition: background 500ms;
+  -moz-transition: background 500ms;
+  -ms-transition: background 500ms;
+  -o-transition: background 500ms;
+  transition: background 500ms;
+  /*-webkit-animation: slideLogoLeft 1000ms linear;*/
+  /*-o-animation: slideLogoLeft 1000ms linear;*/
+  /*animation: slideLogoLeft 1000ms linear;*/
+  /*animation-timing-function: linear;*/
+  /*-webkit-animation-timing-function: linear;*/
+  /*left: 0 !important;*/
+  /*-webkit-transform: translateX(0) !important;*/
+  /*-moz-transform: translateX(0) !important;*/
+  /*-ms-transform: translateX(0) !important;*/
+  /*-o-transform: translateX(0) !important;*/
+  /*transform: translateX(0) !important;*/
+}
+
+@keyframes slideLogoLeft {
+
+  0% {
+    transform-origin: 0 0;
+    transform: translateX(40%);
+  }
+
+  100% {
+    transform-origin: 0 0;
+    transform: translateX(0);
+  }
+
 }
 
 .resumeCardContainer {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 85%;
+  width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  /*-webkit-transform: translateY(20%);*/
-  /*-moz-transform: translateY(20%);*/
-  /*-ms-transform: translateY(20%);*/
-  /*-o-transform: translateY(20%);*/
-  /*transform: translateY(20%);*/
-  background: #ffffff;
+  background: transparent;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.changeResumeCardContainerBGColor {
+  background: #ffffff;
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  -moz-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  -webkit-transition: background 500ms;
+  -moz-transition: background 500ms;
+  -ms-transition: background 500ms;
+  -o-transition: background 500ms;
+  transition: background 500ms;
 }
 
 #resumeCardContent {
   max-height: 0;
   overflow: hidden;
+  text-align: center;
 }
 
 .expandResumeCardContent {
@@ -89,67 +139,142 @@
   transition: max-height 500ms;
 }
 
-.md-card-header-text {
-  margin: 0 !important;
-}
-
 .resumeCardHeader {
   width: 100%;
   height: auto !important;
 }
 
-.resumeCardHeader .md-card-header-text {
-  margin: 0 !important;
-}
-
-.animateLoadingContainer {
-  width: 25% !important;
-  background: #ffffff !important;
-  -webkit-transition: background, width 500ms;
-  -moz-transition: background, width 500ms;
-  -ms-transition: background, width 500ms;
-  -o-transition: background, width 500ms;
-  transition: background, width 500ms;
-  /*-webkit-animation: bounceUp 1500ms ease-in;*/
-  /*-o-animation: bounceUp 1500ms ease-in;*/
-  /*animation: bounceUp 1500ms ease-in;*/
-  /*-webkit-transform: translateY(0) !important;*/
-  /*-moz-transform: translateY(0) !important;*/
-  /*-ms-transform: translateY(0) !important;*/
-  /*-o-transform: translateY(0) !important;*/
-  /*transform: translateY(0) !important;*/
-}
-
-/*@keyframes bounceUp {*/
-  /*0%, 20%, 50%, 80% {*/
-  /*}*/
-  /*40%, 60% {*/
-    /*-webkit-transform: translateY(22%);*/
-    /*-moz-transform: translateY(22%);*/
-    /*-ms-transform: translateY(22%);*/
-    /*-o-transform: translateY(22%);*/
-    /*transform: translateY(22%);*/
-  /*}*/
-
-  /*100% {*/
-    /*-webkit-transform: translateY(0);*/
-    /*-moz-transform: translateY(0);*/
-    /*-ms-transform: translateY(0);*/
-    /*-o-transform: translateY(0);*/
-    /*transform: translateY(0);*/
-  /*}*/
-/*}*/
-
 .profilePicContainer {
   display: block;
   margin: 0 auto;
-  border-radius: 25%;
+  border-radius: 20%;
   height: 217px;
   overflow: hidden;
-  width: 160px;
-  box-shadow: 0px 0px 30px #cccccc
+  width: 135px;
+  max-height: 175px;
+  box-shadow: 0px 0px 30px #cccccc;
+  /*-webkit-transform: scale(0);*/
+  /*-moz-transform: scale(0);*/
+  /*-ms-transform: scale(0);*/
+  /*-o-transform: scale(0);*/
+  /*transform: scale(0);*/
 }
 
 .profilePicContainer img {
-  max-width: 160px;
+  width: 150px;
+  height: auto;
+}
+
+/*.profilePic {*/
+  /*width: 50%;*/
+  /*text-align: center;*/
+  /*margin: 1em auto;*/
+/*}*/
+
+/*.profilePic div {*/
+  /*display: inline-block;*/
+/*}*/
+
+.profilePic {
+  width: 30%;
+  max-width: 125px;
+}
+
+/*.profilePic div img:nth-of-type(1) {*/
+  /*background: blue;*/
+/*}*/
+/*.profilePic div img:nth-of-type(1)::before {*/
+  /*content: '';*/
+  /*position: relative;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*background-color: red;*/
+/*}*/
+
+.animateProfilePic {
+  -webkit-transform: scale(1) !important;
+  -moz-transform: scale(1) !important;
+  -ms-transform: scale(1) !important;
+  -o-transform: scale(1) !important;
+  transform: scale(1) !important;
+  -webkit-animation: expandImage;
+  -o-animation: expandImage;
+  animation: expandImage;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes expandImage {
+  from {
+    -webkit-border-radius: 200%;
+    -moz-border-radius: 200%;
+    border-radius: 200%;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+  }
+  to {
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    border-radius: 20%;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.animateIntro {
+  padding: .25em;
+  width: 375px !important;
+  -webkit-animation: animateLetters 3s steps(60, end);
+  -o-animation: animateLetters 3s steps(60, end);
+  animation: animateLetters 3s steps(60, end);
+}
+
+.profileIntroduction {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  display: inline-block;
+  position: relative;
+  font-size: .75rem;
+  margin: 0 auto 1em;
+  color: rgba(0,0,0,0.7);
+  background: rgba(999,999,999, 7.6);
+  font-family: Courier;
+}
+
+.animateIntro::after {
+  content: '|';
+  -webkit-animation: blink 1s infinite;
+  -o-animation: blink 1s infinite;
+  animation: blink 1s infinite;
+  padding: 0 2px;
+}
+
+@keyframes animateLetters {
+  from {
+    width: 0;
+  }
+  to {
+    width: 375px;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
